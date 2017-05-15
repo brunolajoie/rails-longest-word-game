@@ -1,0 +1,26 @@
+<h2>Results</h2>
+<ul>
+  <li>
+    Your word: <%= @answer %>
+  </li>
+  <li>
+    Translation <%= @result[:translation] %>
+  </li>
+  <li>
+    Your score: <%= @result[:score] %>
+  </li>
+  <li>
+    Your time: <%= @result[:time] %> seconds
+  </li>
+  <li>
+     <%= @result[:message] %>
+  </li>
+  <li>
+    Number of plays: <%= session[:results].length %>
+  </li>
+</ul>
+<hr>
+
+<div class="btn"><%= link_to "give it another shot", game_path %></div>
+<div class="btn"><%= link_to "start a new session", root_path %></div>
+

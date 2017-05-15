@@ -1,0 +1,16 @@
+<!-- test play
+
+grid = generate_grid(9)
+puts grid.join(" ") -->
+
+<h2>Welcome to the longest word-game !</h2>
+<h1>Here is your grid:</h1>
+<p><%= @grid.join(" ") %></p>
+<hr>
+<form action="/score">
+  <label for="question">What's your best shot </label>
+  <input type="text" id="question" placeholder="an english word" name="form_answer">
+  <input type="hidden" name="start_time" value="<%= @start_time %>">
+  <input type="hidden" name="grid" value="<%= @grid.join(" ").strip %>">
+  <input type="submit" value="Go!">
+</form>
